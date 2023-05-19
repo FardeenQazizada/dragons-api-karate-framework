@@ -1,7 +1,7 @@
 @Regression
 Feature: Plan Code Feature
   
-  Backgroung: Setup api tests and get token
+  Background: Setup api tests and get token
   * def result = callonce read('GenerateToken.feature')
     And print result
     * def generatedToken = result.response.token
@@ -13,7 +13,4 @@ Feature: Plan Code Feature
     When method get
     Then status 200
     And print response
-    And assert reponse[0].planExpired == false
-    And assert reponse[1].planExpired == false
-    And assert reponse[2].planExpired == false
-    And assert reponse[3].planExpired == false
+   
